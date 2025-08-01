@@ -30,11 +30,5 @@ jobs:
     - name: Build Project
       run: dotnet build ./src/${{ env.FUNCTION_NAME }}.csproj --configuration Release
       
-    - name: Publish Lambda
-      run:  dotnet lambda deploy-function AwsLambdaDemo \
-            --region us-east-1 \
-            --function-role arn:aws:iam::570829448606:role/Aws_Test_Profile_Role \
-            dotnet lambda deploy-function AwsLambdaDemo \          
-            --project-location ./src/${{ env.FUNCTION_NAME }}
     - name: Post deploy status
       run: echo "Deployment complete!"
