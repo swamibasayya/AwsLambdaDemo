@@ -29,8 +29,6 @@ jobs:
 
     - name: Build Project
       run: dotnet build ./src/${{ env.FUNCTION_NAME }}.csproj --configuration Release
-    - name: Install Amazon.Lambda.Tools
-      run: dotnet tool install lambda commands. Update your workflow file [.github -g Amazon.Lambda.Tools
-     
+       
     - name: Post deploy status
       run: echo "Deployment complete!"
