@@ -26,7 +26,7 @@ jobs:
       run: dotnet restore ./src/${{ env.FUNCTION_NAME }}.csproj
 
     - name: Build Project
-      run: dotnet build ./src/${{ env.FUNCTION_NAME }}/${{ env.FUNCTION_NAME }}.csproj --configuration Release
+      run: dotnet build ./src/${{ env.FUNCTION_NAME }}.csproj --configuration Release
 
     - name: Publish Lambda
       run: dotnet lambda deploy-function ${{ env.FUNCTION_NAME }} \
