@@ -33,7 +33,8 @@ jobs:
       run: |
           dotnet lambda deploy-function AwsLambdaDemo \
             --region us-east-1 \
-            --function-role arn:aws:iam::570829448606:role/Aws_Test_Profile_Role           
+            --function-role arn:aws:iam::570829448606:role/Aws_Test_Profile_Role \
+            --project-location ./src/AwsLambdaDemo/${{ env.FUNCTION_NAME }}
       
     - name: Post deploy status
       run: echo "Deployment complete!"
